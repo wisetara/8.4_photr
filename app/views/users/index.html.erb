@@ -1,9 +1,18 @@
-<h1>Welcome to Photr</h1>
-<h4>- the world's premiere photo sharing app-</h4>
+<div class="jumbotron">
+  <h1>Welcome to Photr</h1>
+  <h4>- the world's premiere photo sharing app-</h4>
 
-<br>
-<br>
-<br>
-<%= link_to "Sign Up for Photr", new_user_path, :class=> "btn btn-primary" %>
+  <br>
+  <%= link_to "Sign Up for Photr", new_user_path, :class=> "btn btn-primary" %>
+</div>
+
+
+
+<h3>Here are some Photr-izers you can join:</h3>
+<ul class ="bg-primary">
+  <% @users.each do |user| %>
+    <li> <%= user.name %> </li>
+  <% end %>
+</ul>
 
 <h6>Copyright '87</h6>
